@@ -1,0 +1,274 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Quicksand", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+header {
+    background:#28a745;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    position: sticky;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#content {
+    float: left;
+    width: 75%;
+    gap: 20px;
+    display: grid;
+    grid-column: 1fr;
+}
+
+article {
+    background: #f4f4f4;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.product-card {
+    display: flex;
+    gap: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: scale(1.02);
+}
+
+.product-card img {
+    max-width: 150px;
+    border-radius: 8px;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.buy-now {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition:  0.3s;
+}
+
+.buy-now:hover {
+    background: #218838;
+}
+
+
+
+.review-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+    max-width: 600px; 
+    margin: 0 auto; 
+  
+}
+
+aside.review {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+    margin: 5px auto 0; 
+    position: relative;
+   
+    top: -2px; 
+    
+}
+.review-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.review-content {
+    text-align: center;
+}
+
+.review-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.review-text {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.review-rating {
+    font-size: 20px;
+    color: #ffcc00; 
+}
+
+.star {
+    margin: 0 2px;
+}
+
+
+
+footer {
+    background-color: #28a745;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+    max-width: 300px;
+}
+
+.footer-section h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.footer-section p {
+    font-size: 0.9em;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+}
+
+.social-media a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.social-media a:hover {
+    color: #34c58b; 
+}
+
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.8em;
+}
+
+
+/* Media queries */
+
+/* Media Query untuk layar tablet */
+@media screen and (max-width: 949px) {
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #content {
+        float: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    aside.review {
+        float: none;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .product-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card img {
+        max-width: 100%;
+    }
+}
+
+/* Media Query untuk layar mobile/hp */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 0.5rem 0;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    .product-card {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .buy-now {
+        padding: 8px 16px;
+    }
+
+    footer {
+        padding: 5px 0;
+    }
+}
